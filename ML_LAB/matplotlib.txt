@@ -1,0 +1,93 @@
+Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import matplotlib.pyplot
+import matplotlib.pyplot as plt
+empdata={'empid':[1001,1002,1003,1004,1005,1006], 'empname':['Amit Kumar','Ravi Sharma','Ravindra Kumar','Dilip Kumar','Raj Kapoor','Bhupendra'],'salary':[1000,23000,18000,16500,9999.99,5500],'Date of Joining':['10-10-2010','03-20-2002','03-03-2002','09-10-2000','10-08-2000','09-09-1999']]}
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '{'
+empdata={'empid':[1001,1002,1003,1004,1005,1006], 'empname':['Amit Kumar','Ravi Sharma','Ravindra Kumar','Dilip Kumar','Raj Kapoor','Bhupendra'],'salary':[1000,23000,18000,16500,9999.99,5500],'Date of Joining':['10-10-2010','03-20-2002','03-03-2002','09-10-2000','10-08-2000','09-09-1999']}
+import pandas as pd
+df=pd.DataFrame()
+df=pd.DataFrame(empdata)
+x=df('empid')
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    x=df('empid')
+TypeError: 'DataFrame' object is not callable
+x=df['empid']
+y=df['salary']
+plt.bar(x,y)
+<BarContainer object of 6 artists>
+plt.show()
+plt.bar(x,y,label='empdata',colour='red')
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    plt.bar(x,y,label='empdata',colour='red')
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\pyplot.py", line 2412, in bar
+    return gca().bar(
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\__init__.py", line 1459, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\axes\_axes.py", line 2488, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\artist.py", line 1223, in _internal_update
+    return self._update_props(
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\artist.py", line 1197, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'colour'
+plt.bar(x,y,label='empdata',color='red')
+<BarContainer object of 6 artists>
+plt.show()
+plt.bar(x,y,plt.title='empdata',color='red')
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
+plt.title('empdata')
+Text(0.5, 1.0, 'empdata')
+plt.show()
+plt.legend()
+No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<matplotlib.legend.Legend object at 0x000001FDE547A0B0>
+plt.legend('empdata')
+<matplotlib.legend.Legend object at 0x000001FDE48469B0>
+plt.show()
+plt.xlabel('empid')
+Text(0.5, 0, 'empid')
+plt.ylabel('salary')
+Text(0, 0.5, 'salary')
+plt.show()
+plt.bar(x,y,color='red')
+<BarContainer object of 6 artists>
+plt.show()
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/abc.py ===========================================================================
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/xyz.py ===========================================================================
+Traceback (most recent call last):
+  File "C:/Users/211b365/Desktop/xyz.py", line 9, in <module>
+    test_value_on_bar_top()
+  File "C:/Users/211b365/Desktop/xyz.py", line 5, in test_value_on_bar_top
+    plt.bar(x,y)
+NameError: name 'plt' is not defined
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/xyz.py ===========================================================================
+Traceback (most recent call last):
+  File "C:/Users/211b365/Desktop/xyz.py", line 11, in <module>
+    test_value_on_bar_top()
+  File "C:/Users/211b365/Desktop/xyz.py", line 8, in test_value_on_bar_top
+    for index,value in numerade():
+NameError: name 'numerade' is not defined. Did you mean: 'enumerate'?
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/xyz.py ===========================================================================
+Traceback (most recent call last):
+  File "C:/Users/211b365/Desktop/xyz.py", line 11, in <module>
+    test_value_on_bar_top()
+  File "C:/Users/211b365/Desktop/xyz.py", line 8, in test_value_on_bar_top
+    for index,value in enumerate():
+TypeError: enumerate() missing required argument 'iterable' (pos 1)
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/xyz.py ===========================================================================
+Traceback (most recent call last):
+  File "C:/Users/211b365/Desktop/xyz.py", line 11, in <module>
+    test_value_on_bar_top()
+  File "C:/Users/211b365/Desktop/xyz.py", line 9, in test_value_on_bar_top
+    plt.text(index,value,str(value()))
+TypeError: 'int' object is not callable
+
+=========================================================================== RESTART: C:/Users/211b365/Desktop/xyz.py ===========================================================================

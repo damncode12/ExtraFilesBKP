@@ -1,0 +1,98 @@
+Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import numpy as np
+np
+<module 'numpy' from 'C:\\Users\\211b365\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\__init__.py'>
+import numpy
+np.__version__
+'1.24.1'
+a=[1,2,3,4]
+b=a
+a
+[1, 2, 3, 4]
+b
+[1, 2, 3, 4]
+a.append(5)
+a
+[1, 2, 3, 4, 5]
+b
+[1, 2, 3, 4, 5]
+a=np.array(b)
+a
+array([1, 2, 3, 4, 5])
+a.dtype
+dtype('int32')
+c=np.array([4,5,6,7,3.14])
+c.dtype
+dtype('float64')
+c
+array([4.  , 5.  , 6.  , 7.  , 3.14])
+b=np.array([1,2,3,4,5],dtype=np.float64)
+b
+array([1., 2., 3., 4., 5.])
+b=np.array([1.,2.,3.],dtype=np.int)
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    b=np.array([1.,2.,3.],dtype=np.int)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\__init__.py", line 284, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'int'. Did you mean: 'inf'?
+e=np.array([[1,2,3,4],[4,5,6,7,8]])
+                         
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    e=np.array([[1,2,3,4],[4,5,6,7,8]])
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+e=np.array([[1,2,3,4],[4,5,6,7]])
+                         
+e
+                         
+array([[1, 2, 3, 4],
+       [4, 5, 6, 7]])
+e.shape
+                         
+(2, 4)
+e.size
+                         
+8
+a.shape
+                         
+(5,)
+e.ndim
+                         
+2
+a.ndim
+                         
+1
+c.ndim
+                         
+1
+b.ndim
+                         
+1
+e*2
+                         
+array([[ 2,  4,  6,  8],
+       [ 8, 10, 12, 14]])
+e-2
+                         
+array([[-1,  0,  1,  2],
+       [ 2,  3,  4,  5]])
+e.T
+                         
+array([[1, 4],
+       [2, 5],
+       [3, 6],
+       [4, 7]])
+e
+                         
+array([[1, 2, 3, 4],
+       [4, 5, 6, 7]])
+e@e.T
+                         
+array([[ 30,  60],
+       [ 60, 126]])
+np.dot(e,e.T)
+                         
+array([[ 30,  60],
+       [ 60, 126]])

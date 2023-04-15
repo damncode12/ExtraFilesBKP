@@ -1,0 +1,270 @@
+Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import pandas as pd
+df = pd.DataFrame([1, 3, 5, 12, 6, 8],[10,11,12,20,50,8])
+df
+     0
+10   1
+11   3
+12   5
+20  12
+50   6
+8    8
+ df=pd.DataFrame({'A':[1, 3, 5, 12, 6, 8], 'B':[10,11,12,20,50,8]},index=[0,1,2,3,4,5])
+ 
+SyntaxError: unexpected indent
+df=pd.DataFrame({'A':[1, 3, 5, 12, 6, 8], 'B':[10,11,12,20,50,8]},index=[0,1,2,3,4,5])
+df
+    A   B
+0   1  10
+1   3  11
+2   5  12
+3  12  20
+4   6  50
+5   8   8
+df=pd.DataFrame({'a':[1, 2, 8, 4], 'b':[5,6,9,8], 'c':[11,12,30,14]},index=[0,1,2,3])
+df
+   a  b   c
+0  1  5  11
+1  2  6  12
+2  8  9  30
+3  4  8  14
+df=pd.DataFrame({'X':[78,85,96,80,86], 'Y':[84,94,89,83,86], 'Z':[86,97,96,72,83]},index=[0,1,2,3,4])
+df
+    X   Y   Z
+0  78  84  86
+1  85  94  97
+2  96  89  96
+3  80  83  72
+4  86  86  83
+exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index = ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j']
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+exam_data = ({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index = ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+exam_data = ({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+NameError: name 'np' is not defined
+import numpy as np
+exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+exam_data
+        name  score  attempts qualify
+a  Anastasia   12.5         1     yes
+b       Dima    9.0         3      no
+c  Katherine   16.5         2     yes
+d      James    NaN         3      no
+e      Emily    9.0         2      no
+f    Michael   20.0         3     yes
+g    Matthew   14.5         1     yes
+h      Laura    NaN         1      no
+i      Kevin    8.0         2      no
+j      Jonas   19.0         1     yes
+exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j']).info()
+<class 'pandas.core.frame.DataFrame'>
+Index: 10 entries, a to j
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   name      10 non-null     object 
+ 1   score     8 non-null      float64
+ 2   attempts  10 non-null     int64  
+ 3   qualify   10 non-null     object 
+dtypes: float64(1), int64(1), object(2)
+memory usage: 400.0+ bytes
+exam_data[1:3]
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    exam_data[1:3]
+TypeError: 'NoneType' object is not subscriptable
+exam_data[0:3]
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    exam_data[0:3]
+TypeError: 'NoneType' object is not subscriptable
+exam_data[0:3]
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    exam_data[0:3]
+TypeError: 'NoneType' object is not subscriptable
+exam_data[0:1]
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    exam_data[0:1]
+TypeError: 'NoneType' object is not subscriptable
+exam_data.head(3)
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    exam_data.head(3)
+AttributeError: 'NoneType' object has no attribute 'head'
+exam_data.exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    exam_data.exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+AttributeError: 'NoneType' object has no attribute 'exam_data'
+exam_data =pd.DataFrame({'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']},index= ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j'])
+exam_data.info()
+<class 'pandas.core.frame.DataFrame'>
+Index: 10 entries, a to j
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   name      10 non-null     object 
+ 1   score     8 non-null      float64
+ 2   attempts  10 non-null     int64  
+ 3   qualify   10 non-null     object 
+dtypes: float64(1), int64(1), object(2)
+memory usage: 400.0+ bytes
+exam_data[0:3]
+        name  score  attempts qualify
+a  Anastasia   12.5         1     yes
+b       Dima    9.0         3      no
+c  Katherine   16.5         2     yes
+exam_data[['name', 'score']]
+        name  score
+a  Anastasia   12.5
+b       Dima    9.0
+c  Katherine   16.5
+d      James    NaN
+e      Emily    9.0
+f    Michael   20.0
+g    Matthew   14.5
+h      Laura    NaN
+i      Kevin    8.0
+j      Jonas   19.0
+exam_data['b','d','f','g','name','score']
+Traceback (most recent call last):
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: ('b', 'd', 'f', 'g', 'name', 'score')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<pyshell#28>", line 1, in <module>
+    exam_data['b','d','f','g','name','score']
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: ('b', 'd', 'f', 'g', 'name', 'score')
+exam_data.loc[['b','d','f','g', [columns='name' , 'score']]
+              
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+exam_data.loc[['b','d','f','g',columns='name' , 'score']
+              
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+exam_data.loc[['b','d','f','g'], ['name','score']]
+              
+      name  score
+b     Dima    9.0
+d    James    NaN
+f  Michael   20.0
+g  Matthew   14.5
+exam_data[exam_data['attempts' > 2]]
+              
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    exam_data[exam_data['attempts' > 2]]
+TypeError: '>' not supported between instances of 'str' and 'int'
+exam_data[exam_data['attempts'] > 2]
+              
+      name  score  attempts qualify
+b     Dima    9.0         3      no
+d    James    NaN         3      no
+f  Michael   20.0         3     yes
+exam_data.shape
+              
+(10, 4)
+len(exam_data.rows)
+              
+Traceback (most recent call last):
+  File "<pyshell#35>", line 1, in <module>
+    len(exam_data.rows)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\generic.py", line 5902, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'rows'
+len(exam_data.columns)
+4
+len(exam_data)
+10
+print("Number of rows :",len(exam_data)," /n Number of columns :",len(exam_data.columns))
+Number of rows : 10  /n Number of columns : 4
+print("Number of rows :",len(exam_data)," \n Number of columns :",len(exam_data.columns))
+Number of rows : 10  
+ Number of columns : 4
+exam_data[['score'] = 'NaN']
+SyntaxError: invalid syntax
+exam_data[exam_data['score'] == 'NaN']
+Empty DataFrame
+Columns: [name, score, attempts, qualify]
+Index: []
+\
+exam_data[exam_data['score'] == np.NaN]
+Empty DataFrame
+Columns: [name, score, attempts, qualify]
+Index: []
+exam_data[exam_data['score'] == np.nan]
+Empty DataFrame
+Columns: [name, score, attempts, qualify]
+Index: []
+exam_data[exam_data[columns].isnull()]
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    exam_data[exam_data[columns].isnull()]
+NameError: name 'columns' is not defined
+exam_data[exam_data['score'].isnull()]
+    name  score  attempts qualify
+d  James    NaN         3      no
+h  Laura    NaN         1      no
+df[df['score'].between(15, 20)]
+Traceback (most recent call last):
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'score'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    df[df['score'].between(15, 20)]
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\211b365\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'score'
+exam_data[exam_data['score'].between(15, 20)]
+        name  score  attempts qualify
+c  Katherine   16.5         2     yes
+f    Michael   20.0         3     yes
+j      Jonas   19.0         1     yes
+exam_data[(exam_data['attempts']<2) & (exam_data['score']>15)]
+    name  score  attempts qualify
+j  Jonas   19.0         1     yes
+exam_data.loc['d', 'score'] = 11.5
+exam_data
+        name  score  attempts qualify
+a  Anastasia   12.5         1     yes
+b       Dima    9.0         3      no
+c  Katherine   16.5         2     yes
+d      James   11.5         3      no
+e      Emily    9.0         2      no
+f    Michael   20.0         3     yes
+g    Matthew   14.5         1     yes
+h      Laura    NaN         1      no
+i      Kevin    8.0         2      no
+j      Jonas   19.0         1     yes
+exam_data['attempts'].sum())
+SyntaxError: unmatched ')'
+exam_data['attempts'].sum()
+19
